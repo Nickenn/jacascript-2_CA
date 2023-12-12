@@ -6,10 +6,9 @@ export const deletePostBtn = document.querySelector("#delete-post-btn");
 
 //  User registration page
 
-export const userRegistrationForm =
-  document.querySelector("#user-registration");
-export const userRegistrationMessage = document.querySelector(
-  ".user-registration-message"
+export const createAccountForm = document.querySelector("#create-account");
+export const createAccountMessage = document.querySelector(
+  ".create-account-message"
 );
 
 //  Login page

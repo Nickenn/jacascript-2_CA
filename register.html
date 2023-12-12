@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="/styles/styles.css" />
     <title>MeBook | Create an account</title>
+    <script type="module" defer src="/js/register.js"></script>
   </head>
   <body>
     <header>
@@ -32,45 +33,47 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="pb-5">
       <div class="container py-5">
         <div class="row d-flex justify-content-center">
-          <div class="col-xl-10 col-lg-10 col-md-8 col-sm-7">
-            <h3 class="py-5 mt-4">Create an account</h3>
-            <form class="container" id="user-registration" method="post">
-              <label for="name"><h5 class="mt-2">Username *</h4></label>
+          <div class="col-xl-4 col-lg-6 col-md-7 col-sm-7">
+            <h1 class="py-5 mt-4">Create account</h1>
+            <form id="create-account" method="post">
+              <label for="name"><h4>Username *</h4></label>
               <input
                 type="text"
-                class="form-control"
                 name="name"
                 id="name"
-                placeholder="username"
-                title="Username must only have letters, numbers and underscore. Example: Rob_thompson90"
+                class="form-control"
+                placeholder="my_username"
+                title="Username must only have letters, numbers and underscore. Example: Bob_Dylan88"
                 required
                 pattern="^[\w]+$"
               />
-              <label for="email"><h5 class="mt-2">Email *</h4></label>
+
+              <label for="email"><h4 class="mt-2">E-mail *</h4></label>
               <input
+                type="email"
                 name="email"
+                id="email"
                 class="form-control"
-                id="name"
                 placeholder="example@noroff.no"
                 title="Must use a noroff e-mail. Example: teacher@noroff.no or studentname@stud.noroff.no"
                 required
                 pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
               />
-              <label for="password"><h5 class="mt-2">Password *</h4></label>
+
+              <label for="password"><h4 class="mt-2">Password *</h4></label>
               <input
-                name="password"
                 type="password"
-                class="form-control"
+                name="password"
                 id="password"
-                placeholder="Password"
+                class="form-control"
                 required
                 minlength="8"
               />
 
-              <label for="banner"><h5 class="mt-2">Banner</h4></label>
+              <label for="banner"><h4 class="mt-2">Banner</h4></label>
               <input
                 type="url"
                 name="banner"
@@ -78,30 +81,27 @@
                 class="form-control"
               />
 
-              <label for="avatar"><h5 class="mt-2">Avatar</h4></label>
+              <label for="avatar"><h4 class="mt-2">Avatar</h4></label>
               <input
                 type="url"
                 name="avatar"
                 id="avatar"
                 class="form-control"
-                placeholder="image-url"
               />
+
               <p>* required fields</p>
               <div class="d-flex flex-row align-items-center mt-3 flex-wrap">
-                <button
-                  type="submit"
-                  class="btn btn-primary ps-5 pe-5 btn-create-account"
-                >
+                <button class="btn btn-primary ps-5 pe-5 btn-create-account">
                   Create account
                 </button>
                 <p class="ms-3 mb-0">
-                  or <a href="loginpage.html" class="link-secondary">log in</a> if
+                  or <a href="login.html" class="link-secondary">log in</a> if
                   you already have an account
                 </p>
               </div>
             </form>
             <div>
-              <h4 class="user-registration-message"></h4>
+              <h4 class="mt-3 create-account-message"></h4>
             </div>
           </div>
         </div>
@@ -143,12 +143,6 @@
                 <i class="fas fa-envelope me-3 text-secondary"></i>
                 info@example.com
               </p>
-              <p>
-                <i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88
-              </p>
-              <p>
-                <i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89
-              </p>
             </div>
           </div>
         </div>
@@ -163,6 +157,5 @@
         >
       </div>
     </footer>
-    <script type="module" src="/js/register.js"></script>
   </body>
 </html>

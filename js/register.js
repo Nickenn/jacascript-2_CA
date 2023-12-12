@@ -1,3 +1,3 @@
-import { userRegistrationEvent } from "./functions/userregistration.js";
+import { setCreateAccountListener } from "./functions/create-account.js";
 
-userRegistrationEvent();
+setCreateAccountListener();
