@@ -24,7 +24,7 @@ export const postsUrl = `${BASE_URL}posts?_author=true`;
  * ```
  */
 
-export const createAccountUrl = `${BASE_URL}auth/register`;
+export const createAccountUrl = BASE_URL + "auth/register";
 
 //  Single post profile
 
