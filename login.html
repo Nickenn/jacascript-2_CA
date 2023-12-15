@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description="
-      content="Here you may create an account for Sociality."
+      content="Here you can log in to you account on Sociality"
     />
-    <title>Create new account | Sociality</title>
+    <title>Log in | Sociality</title>
     <link rel="stylesheet" href="dist/styles.css" />
   </head>
   <body>
@@ -16,12 +16,9 @@
       <nav class="navbar navbar-expand-md">
         <div class="container">
           <a href="index.html" class="navbar-brand"
-            ><img
-              src="/assets/logo-color.png"
-              alt="Sociality logo."
-              width="170"
-              height="170"
-          /></a>
+            ><img src="/assets/logo-color.png" alt="Sociality logo." width="170"
+            height="170"" /></a
+          >
           <button
             class="navbar-toggler"
             data-bs-toggle="collapse"
@@ -35,7 +32,7 @@
                 <a href="index.html" class="nav-link">Home</a>
               </li>
               <li class="nav-item">
-                <a href="login.html" class="nav-link">Log in</a>
+                <a href="login.html" class="nav-link active">Log in</a>
               </li>
               <li class="nav-item">
                 <a href="create-account.html" class="nav-link active"
@@ -47,75 +44,44 @@
         </div>
       </nav>
     </header>
-    <main class="pb-5">
+    <main class="pb-5 mt-5">
       <div class="container py-5">
         <div class="row d-flex justify-content-center">
           <div class="col-xl-4 col-lg-6 col-md-7 col-sm-7">
-            <h1 class="py-5 mt-4">Create account</h1>
-            <form id="create-account" method="post">
-              <label for="name"><h4>Username *</h4></label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                class="form-control"
-                placeholder="my_username"
-                title="Username must only have letters, numbers and underscore. Example: Bob_Dylan88"
-                required
-                pattern="^[\w]+$"
-              />
-
-              <label for="email"><h4 class="mt-2">E-mail *</h4></label>
+            <h1 class="pb-5 mt-4">Log in</h1>
+            <form id="login-form">
+              <label for="email"><h4>E-mail</h4></label>
               <input
                 type="email"
                 name="email"
                 id="email"
                 class="form-control"
                 placeholder="example@noroff.no"
-                title="Must use a noroff e-mail. Example: teacher@noroff.no or studentname@stud.noroff.no"
                 required
-                pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
               />
-
-              <label for="password"><h4 class="mt-2">Password *</h4></label>
+              <label for="password"><h4 class="mt-4">Password</h4></label>
               <input
                 type="password"
                 name="password"
                 id="password"
                 class="form-control"
                 required
-                minlength="8"
               />
-
-              <label for="banner"><h4 class="mt-2">Banner</h4></label>
-              <input
-                type="url"
-                name="banner"
-                id="banner"
-                class="form-control"
-              />
-
-              <label for="avatar"><h4 class="mt-2">Avatar</h4></label>
-              <input
-                type="url"
-                name="avatar"
-                id="avatar"
-                class="form-control"
-              />
-
-              <p>* required fields</p>
               <div class="d-flex flex-row align-items-center mt-3 flex-wrap">
-                <button class="btn btn-primary ps-5 pe-5 btn-create-account">
-                  Create account
-                </button>
+                <button class="btn btn-primary ps-5 pe-5">Log in</button>
                 <p class="ms-3 mb-0">
-                  or <a href="login.html" class="link-secondary">log in</a> if
-                  you already have an account
+                  or create a
+                  <a href="create-account.html" class="link-secondary"
+                    >new account <i class="fa-solid fa-plus"></i
+                  ></a>
                 </p>
               </div>
             </form>
-            <div>
-              <h4 class="mt-3 create-account-message"></h4>
+            <div class="login-error mt-4">
+              <p class="d-none">
+                Ooobs! Something went wrong, are you sure you have an account
+                here?
+              </p>
             </div>
           </div>
         </div>
@@ -167,7 +133,7 @@
         <a class="text-reset fw-bold" href="/index.html">Sociality</a>
       </div>
     </footer>
-    <script type="module" defer src="js/create-account.js"></script>
+    <script src="js/login-account.js" type="module"></script>
     <script
       defer
       src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"

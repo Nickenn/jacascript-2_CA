@@ -1,10 +1,11 @@
-import { fetchPostsWithToken } from "./functions/index.js";
-import { logOutUser } from "./functions/logout.js";
-import { accessToken } from "./components/variables.js"
+import { fetchPostsWithToken, setCreatePostListener } from "./functions/index.js";
+import { setLogOut } from "./functions/logout.js";
+import { token } from "./components/variables.js"
 
 fetchPostsWithToken();
-logOutUser();
+setCreatePostListener();
+setLogOut();
 
-if (!accessToken) {
-    window.location.href = "loginpage.html";
+if (!token) {
+  window.location.href = "login.html";
 }

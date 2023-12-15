@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description="
-      content="Here you may create an account for Sociality."
+      content="User profile page on Sociality social network site"
     />
-    <title>Create new account | Sociality</title>
+    <title>Profile page | Sociality</title>
     <link rel="stylesheet" href="dist/styles.css" />
   </head>
   <body>
-    <header class="col-12 top-0">
+    <header class="col-12 position-fixed top-0">
       <nav class="navbar navbar-expand-md">
         <div class="container">
           <a href="index.html" class="navbar-brand"
@@ -35,88 +35,70 @@
                 <a href="index.html" class="nav-link">Home</a>
               </li>
               <li class="nav-item">
-                <a href="login.html" class="nav-link">Log in</a>
+                <a
+                  href="profile.html"
+                  class="nav-link active"
+                  aria-current="page"
+                  >Profile</a
+                >
               </li>
               <li class="nav-item">
-                <a href="create-account.html" class="nav-link active"
-                  >Create account</a
-                >
+                <a href="login.html" class="nav-link log-out">Log out</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <main class="pb-5">
-      <div class="container py-5">
-        <div class="row d-flex justify-content-center">
-          <div class="col-xl-4 col-lg-6 col-md-7 col-sm-7">
-            <h1 class="py-5 mt-4">Create account</h1>
-            <form id="create-account" method="post">
-              <label for="name"><h4>Username *</h4></label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                class="form-control"
-                placeholder="my_username"
-                title="Username must only have letters, numbers and underscore. Example: Bob_Dylan88"
-                required
-                pattern="^[\w]+$"
-              />
-
-              <label for="email"><h4 class="mt-2">E-mail *</h4></label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                class="form-control"
-                placeholder="example@noroff.no"
-                title="Must use a noroff e-mail. Example: teacher@noroff.no or studentname@stud.noroff.no"
-                required
-                pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
-              />
-
-              <label for="password"><h4 class="mt-2">Password *</h4></label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                class="form-control"
-                required
-                minlength="8"
-              />
-
-              <label for="banner"><h4 class="mt-2">Banner</h4></label>
-              <input
-                type="url"
-                name="banner"
-                id="banner"
-                class="form-control"
-              />
-
-              <label for="avatar"><h4 class="mt-2">Avatar</h4></label>
-              <input
-                type="url"
-                name="avatar"
-                id="avatar"
-                class="form-control"
-              />
-
-              <p>* required fields</p>
-              <div class="d-flex flex-row align-items-center mt-3 flex-wrap">
-                <button class="btn btn-primary ps-5 pe-5 btn-create-account">
-                  Create account
-                </button>
-                <p class="ms-3 mb-0">
-                  or <a href="login.html" class="link-secondary">log in</a> if
-                  you already have an account
-                </p>
-              </div>
-            </form>
+    <main>
+      <div class="container mt-5">
+        <div class="col-12 d-flex justify-content-center">
+          <a class="btn btn-primary mt-5 profile-posts" href="#posts"
+            >'s posts</a
+          >
+        </div>
+        <div class="row profile-on-md profile-container pt-5"></div>
+        <div class="row"></div>
+        <div class="row mt-5 d-flex justify-content-center">
+          <div class="col-xl-3 col-lg-3 mt-5 pt-5">
             <div>
-              <h4 class="mt-3 create-account-message"></h4>
+              <form class="d-flex flex-column align-items-center">
+                <label for="caption" class="mt-3">Post on wall</label>
+                <textarea
+                  name="caption"
+                  id="caption"
+                  rows="4"
+                  class="form-control"
+                  placeholder="This feature will be coming soon."
+                ></textarea>
+                <button class="btn btn-primary mt-3 w-50" disabled>
+                  Comment
+                </button>
+              </form>
             </div>
+          </div>
+          <div class="col-xl-6 col-lg-9 col-md-12 mt-5 pt-5" id="posts">
+            <h3 class="mt-2">Posts</h3>
+            <div class="post-container"></div>
+          </div>
+          <div class="col-xl-3"></div>
+        </div>
+
+        <div class="row mt-5 d-flex justify-content-center">
+          <div class="col-3"></div>
+        </div>
+      </div>
+      <div class="container mt-5">
+        <div class="row">
+          <div
+            class="col-12 d-flex justify-content-center align-items-center flex-column"
+          >
+            <a href="#top" class="link-secondary">
+              <h3 class="ms-2 mb-0 ps-3">
+                <i class="fa-solid fa-caret-up"></i>
+              </h3>
+              <p>To the top</p>
+            </a>
           </div>
         </div>
       </div>
@@ -164,10 +146,10 @@
         style="background-color: rgba(0, 0, 0, 0.025)"
       >
         © 2023 Copyright:
-        <a class="text-reset fw-bold" href="/index.html">Sociality</a>
+        <a class="text-reset fw-bold" href="/index.html">MeBook</a>
       </div>
     </footer>
-    <script type="module" defer src="js/create-account.js"></script>
+    <script defer src="js/profile.js" type="module"></script>
     <script
       defer
       src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"

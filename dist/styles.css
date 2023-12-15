@@ -1,1 +1,56 @@
 @import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+header,
+footer {
+  background-color: #e8f2f1;
+}
+
+h1,
+h2,
+h3,
+h4,
+.username,
+nav {
+  font-family: "Roboto", sans-serif;
+}
+
+.btn-primary {
+  background-color: rgba(202, 129, 34, 0.575);
+  border-color: rgba(202, 129, 34, 0.575);
+}
+
+.btn-primary:hover,
+.btn-primary:disabled,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: rgba(60, 190, 199, 0.596);
+  border-color: rgba(60, 190, 199, 0.596);
+}
+
+.img-thumbnail {
+  max-height: 30px;
+}
+
+.username {
+  padding-left: 0px;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .profile-on-md {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .hidden-mobile {
+    display: none;
+  }
+  .new-post-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: left;
+  }
+}

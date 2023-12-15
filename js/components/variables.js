@@ -1,48 +1,53 @@
-//  Home page
+//      Access token
 
-export const postsContainer = document.querySelector(".posts-container");
-export const updatePostBtn = document.querySelector(".update-post-btn");
-export const deletePostBtn = document.querySelector("#delete-post-btn");
+export const token = localStorage.getItem("accessToken");
 
-//  User registration page
+//      Create account page
 
 export const createAccountForm = document.querySelector("#create-account");
 export const createAccountMessage = document.querySelector(
   ".create-account-message"
 );
 
-//  Login page
+//      Login page
 
 export const loginForm = document.querySelector("#login-form");
-export const loginErrorMessage = document.querySelector(".login-error-message");
+export const loginError = document.querySelector(".login-error");
 
-//  Profile page
+//      Index page
 
-export const profilePostsContainer = document.querySelector(
-  ".profile-posts-container"
+export const postsContainer = document.querySelector(".post-container");
+export const createPostForm = document.querySelector(".create-post");
+export const profileNavLink = document.querySelector(".profile-link");
+export const loggedInProfile = localStorage.getItem("profileName");
+export const searchForm = document.querySelector(".search-form");
+
+//      Filter buttons
+
+export const postsWithImagesButton = document.querySelector(".posts-img");
+export const allPostsButton = document.querySelector(".all-posts");
+export const postsWithoutImagesButton = document.querySelector(".posts-no-img");
+
+//       Single post page
+
+export const postContainer = document.querySelector(".specific-post-container");
+export const authButtonsContainer = document.querySelector(
+  ".auth-buttons-container"
 );
-export const profilePostsBtn = document.querySelector(".profile-posts-btn");
+export const updatePostButton = document.querySelector(".btn-update-post");
+export const deletePostButton = document.querySelector("#btn-delete-post");
 
-//  Update post
+//       Update post variables
 
-export const updatePostMedia = document.querySelector(".posts-img");
-export const updatePostTitle = document.querySelector("#update-post-title");
-export const updatePostBody = document.querySelector("#update-post-body");
+export const updateTitle = document.querySelector("#update-title");
+export const updateBody = document.querySelector("#update-body");
+export const updateMedia = document.querySelector("#update-media");
 
-//  Log out
+//       Profile page
+
+export const profileContainer = document.querySelector(".profile-container");
+export const profilePostsButton = document.querySelector(".profile-posts");
+
+//       Log out
 
 export const logOut = document.querySelector(".log-out");
-
-//  Access token
-
-export const accessToken = localStorage.getItem("accessToken");
-
-//  Form validation
-
-export const form = document.querySelector("#Form");
-export const fullName = document.querySelector("#name");
-export const password = document.querySelector("#password");
-export const button = document.querySelector(".btn-submit");
-
-export const nameError = document.querySelector("#nameError");
-export const emailError = document.querySelector("#emailError");
