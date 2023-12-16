@@ -11,16 +11,13 @@ import {
   token,
 } from "../components/variables.js";
 
-// profile link
 profileNavLink.innerHTML = `<a href="profile.html?user=${loggedInProfile}" class="nav-link">Profile</a>`;
 
-// API call to posts
 /**
- * This function fetches posts from an API using an access token.
- * displayPostsOnPage(result) creates HTML to display the API data.
- * searchPosts(result) filteres posts based on input in a search form.
- * filterPosts(result) filteres posts based on query parameters.
+ * This function fetches posts from the API.
+ *
  */
+
 export async function fetchPostsWithToken() {
   try {
     const getPosts = {
@@ -178,12 +175,12 @@ function filterPosts(post) {
   }
 }
 
-// Search posts function
 /**
- * This function display posts based on a value entered in an input field
+ * This function displays posts based on a values from the search input.
  * @param { array } posts An array of objects fetched from an API
  * @returns { array } of objects (posts) containing the value of the input field in the title.
  */
+
 function searchPosts(posts) {
   searchForm.onkeyup = function (event) {
     const searchValue = event.target.value.trim().toLowerCase();
@@ -196,11 +193,11 @@ function searchPosts(posts) {
   };
 }
 
-// Display the search
 /**
- * This function creates HTML based on the result of an input field (search).
+ * This function creates HTML based on the input data from the search field.
  * @param { array } posts An array of objects fetched from an API
  */
+
 function displaySearchResult(posts) {
   postsContainer.innerHTML = "";
   posts.forEach(function (post) {

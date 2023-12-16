@@ -15,7 +15,7 @@ import {
 export function createHtmlForPost(post) {
   const { title, media, body, id, created, tags } = post;
   const { avatar, name } = post.author;
-  document.title = `${title} | SocialClub`;
+  document.title = `${title} | Sociality`;
   if (post.media) {
     postContainer.innerHTML = `
             <div class="row d-flex justify-content-center my-5">
@@ -82,7 +82,7 @@ export function createHtmlForPost(post) {
  */
 
 export function createHtmlForProfile(profile) {
-  const { name, email, banner, avatar } = profile;
+  const { name, avatar } = profile;
   const { posts, followers, following } = profile._count;
   profileContainer.innerHTML = `
             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mt-2">
